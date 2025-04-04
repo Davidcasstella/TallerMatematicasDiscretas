@@ -1,0 +1,17 @@
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\bin\Debug\net8.0-windows\MatematicasDiscretastaller.exe
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\bin\Debug\net8.0-windows\MatematicasDiscretastaller.deps.json
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\bin\Debug\net8.0-windows\MatematicasDiscretastaller.runtimeconfig.json
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\bin\Debug\net8.0-windows\MatematicasDiscretastaller.dll
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\bin\Debug\net8.0-windows\MatematicasDiscretastaller.pdb
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.Form1.resources
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.csproj.GenerateResource.cache
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.AssemblyInfoInputs.cache
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.AssemblyInfo.cs
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.sourcelink.json
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.dll
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\refint\MatematicasDiscretastaller.dll
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.pdb
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\MatematicasDiscretastaller.genruntimeconfig.cache
+C:\Users\David\Desktop\Nueva carpeta (3)\TallerMatematicasDiscretas\obj\Debug\net8.0-windows\ref\MatematicasDiscretastaller.dll
