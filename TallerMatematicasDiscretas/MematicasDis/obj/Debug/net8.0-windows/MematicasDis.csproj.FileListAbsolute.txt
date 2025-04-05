@@ -1,0 +1,35 @@
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.exe
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.deps.json
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.runtimeconfig.json
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.dll
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.pdb
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.Form1.resources
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.csproj.GenerateResource.cache
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.AssemblyInfoInputs.cache
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.AssemblyInfo.cs
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.dll
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\refint\MematicasDis.dll
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.pdb
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.genruntimeconfig.cache
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\ref\MematicasDis.dll
+C:\Users\David\Desktop\Matematicas discretas\MematicasDis\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.Properties.Resources.resources
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.exe
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.deps.json
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.runtimeconfig.json
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.dll
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\bin\Debug\net8.0-windows\MematicasDis.pdb
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.Form1.resources
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.Properties.Resources.resources
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.csproj.GenerateResource.cache
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.AssemblyInfoInputs.cache
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.AssemblyInfo.cs
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.sourcelink.json
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.dll
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\refint\MematicasDis.dll
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.pdb
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\MematicasDis.genruntimeconfig.cache
+C:\Users\David\Desktop\TALLERDISCRETAS\TallerMatematicasDiscretas\MematicasDis\obj\Debug\net8.0-windows\ref\MematicasDis.dll
