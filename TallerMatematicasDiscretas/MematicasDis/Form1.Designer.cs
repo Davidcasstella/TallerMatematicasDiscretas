@@ -57,10 +57,13 @@
             aireAcondicionadoCocina = new Button();
             aireAcondicionadoSala = new Button();
             toolTip1 = new ToolTip(components);
+            pictureBox1 = new PictureBox();
+            OperacionesLogicas = new Button();
             ((System.ComponentModel.ISupportInitialize)ComedorTemp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)HabitacionTemp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SalaTemp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CocinaTemp).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Hora
@@ -73,7 +76,7 @@
             Lahora.AutoSize = true;
             Lahora.BackColor = Color.SpringGreen;
             Lahora.Font = new Font("Segoe UI", 26F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Lahora.Location = new Point(476, 38);
+            Lahora.Location = new Point(386, 3);
             Lahora.Name = "Lahora";
             Lahora.Size = new Size(142, 70);
             Lahora.TabIndex = 0;
@@ -84,17 +87,17 @@
             // 
             ComedorTemp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ComedorTemp.Cursor = Cursors.Cross;
-            ComedorTemp.Location = new Point(89, 38);
+            ComedorTemp.Location = new Point(12, 92);
             ComedorTemp.Maximum = 50;
             ComedorTemp.Name = "ComedorTemp";
             ComedorTemp.Orientation = Orientation.Vertical;
-            ComedorTemp.Size = new Size(69, 156);
+            ComedorTemp.Size = new Size(69, 148);
             ComedorTemp.TabIndex = 1;
             ComedorTemp.Scroll += ComedorTemp_Scroll;
             // 
             // HabitacionTemp
             // 
-            HabitacionTemp.Location = new Point(665, 38);
+            HabitacionTemp.Location = new Point(876, 73);
             HabitacionTemp.Maximum = 50;
             HabitacionTemp.Name = "HabitacionTemp";
             HabitacionTemp.Orientation = Orientation.Vertical;
@@ -104,7 +107,7 @@
             // 
             // SalaTemp
             // 
-            SalaTemp.Location = new Point(665, 289);
+            SalaTemp.Location = new Point(846, 434);
             SalaTemp.Maximum = 50;
             SalaTemp.Name = "SalaTemp";
             SalaTemp.Orientation = Orientation.Vertical;
@@ -114,7 +117,7 @@
             // 
             // CocinaTemp
             // 
-            CocinaTemp.Location = new Point(89, 289);
+            CocinaTemp.Location = new Point(21, 434);
             CocinaTemp.Maximum = 50;
             CocinaTemp.Name = "CocinaTemp";
             CocinaTemp.Orientation = Orientation.Vertical;
@@ -125,7 +128,7 @@
             // PuertaComedor
             // 
             PuertaComedor.AutoSize = true;
-            PuertaComedor.Location = new Point(164, 38);
+            PuertaComedor.Location = new Point(100, 38);
             PuertaComedor.Name = "PuertaComedor";
             PuertaComedor.Size = new Size(163, 29);
             PuertaComedor.TabIndex = 5;
@@ -136,7 +139,7 @@
             // PuertaHabitacion
             // 
             PuertaHabitacion.AutoSize = true;
-            PuertaHabitacion.Location = new Point(834, 38);
+            PuertaHabitacion.Location = new Point(509, 108);
             PuertaHabitacion.Name = "PuertaHabitacion";
             PuertaHabitacion.Size = new Size(173, 29);
             PuertaHabitacion.TabIndex = 6;
@@ -147,7 +150,7 @@
             // PuertaCocina
             // 
             PuertaCocina.AutoSize = true;
-            PuertaCocina.Location = new Point(164, 257);
+            PuertaCocina.Location = new Point(293, 452);
             PuertaCocina.Name = "PuertaCocina";
             PuertaCocina.Size = new Size(141, 29);
             PuertaCocina.TabIndex = 7;
@@ -158,7 +161,7 @@
             // PuertaSala
             // 
             PuertaSala.AutoSize = true;
-            PuertaSala.Location = new Point(834, 247);
+            PuertaSala.Location = new Point(484, 468);
             PuertaSala.Name = "PuertaSala";
             PuertaSala.Size = new Size(120, 29);
             PuertaSala.TabIndex = 8;
@@ -169,7 +172,7 @@
             // btnBombilloComedor
             // 
             btnBombilloComedor.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBombilloComedor.Location = new Point(150, 73);
+            btnBombilloComedor.Location = new Point(100, 184);
             btnBombilloComedor.Name = "btnBombilloComedor";
             btnBombilloComedor.Size = new Size(61, 92);
             btnBombilloComedor.TabIndex = 9;
@@ -180,7 +183,7 @@
             // btnBombilloHabitacion
             // 
             btnBombilloHabitacion.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBombilloHabitacion.Location = new Point(740, 73);
+            btnBombilloHabitacion.Location = new Point(509, 148);
             btnBombilloHabitacion.Name = "btnBombilloHabitacion";
             btnBombilloHabitacion.Size = new Size(61, 92);
             btnBombilloHabitacion.TabIndex = 10;
@@ -191,7 +194,7 @@
             // btnBombilloCocina
             // 
             btnBombilloCocina.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBombilloCocina.Location = new Point(164, 324);
+            btnBombilloCocina.Location = new Point(143, 497);
             btnBombilloCocina.Name = "btnBombilloCocina";
             btnBombilloCocina.Size = new Size(61, 93);
             btnBombilloCocina.TabIndex = 11;
@@ -202,7 +205,7 @@
             // btnBombilloSala
             // 
             btnBombilloSala.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBombilloSala.Location = new Point(725, 333);
+            btnBombilloSala.Location = new Point(513, 515);
             btnBombilloSala.Name = "btnBombilloSala";
             btnBombilloSala.Size = new Size(57, 84);
             btnBombilloSala.TabIndex = 12;
@@ -213,7 +216,7 @@
             // VentanaComedor
             // 
             VentanaComedor.AutoSize = true;
-            VentanaComedor.Location = new Point(164, 12);
+            VentanaComedor.Location = new Point(100, 12);
             VentanaComedor.Name = "VentanaComedor";
             VentanaComedor.Size = new Size(176, 29);
             VentanaComedor.TabIndex = 13;
@@ -224,7 +227,7 @@
             // VentanaHabitacion
             // 
             VentanaHabitacion.AutoSize = true;
-            VentanaHabitacion.Location = new Point(834, 12);
+            VentanaHabitacion.Location = new Point(509, 73);
             VentanaHabitacion.Name = "VentanaHabitacion";
             VentanaHabitacion.Size = new Size(186, 29);
             VentanaHabitacion.TabIndex = 14;
@@ -235,7 +238,7 @@
             // VentanaCocina
             // 
             VentanaCocina.AutoSize = true;
-            VentanaCocina.Location = new Point(164, 231);
+            VentanaCocina.Location = new Point(293, 417);
             VentanaCocina.Name = "VentanaCocina";
             VentanaCocina.Size = new Size(154, 29);
             VentanaCocina.TabIndex = 15;
@@ -246,7 +249,7 @@
             // VentanaSala
             // 
             VentanaSala.AutoSize = true;
-            VentanaSala.Location = new Point(834, 222);
+            VentanaSala.Location = new Point(484, 434);
             VentanaSala.Name = "VentanaSala";
             VentanaSala.Size = new Size(133, 29);
             VentanaSala.TabIndex = 16;
@@ -256,7 +259,7 @@
             // 
             // btnSensorComedor
             // 
-            btnSensorComedor.Location = new Point(150, 171);
+            btnSensorComedor.Location = new Point(320, 278);
             btnSensorComedor.Name = "btnSensorComedor";
             btnSensorComedor.Size = new Size(112, 34);
             btnSensorComedor.TabIndex = 17;
@@ -266,7 +269,7 @@
             // 
             // btnSensorHabitacion
             // 
-            btnSensorHabitacion.Location = new Point(740, 171);
+            btnSensorHabitacion.Location = new Point(484, 314);
             btnSensorHabitacion.Name = "btnSensorHabitacion";
             btnSensorHabitacion.Size = new Size(120, 34);
             btnSensorHabitacion.TabIndex = 18;
@@ -276,7 +279,7 @@
             // 
             // btnSensorCocina
             // 
-            btnSensorCocina.Location = new Point(150, 451);
+            btnSensorCocina.Location = new Point(323, 640);
             btnSensorCocina.Name = "btnSensorCocina";
             btnSensorCocina.Size = new Size(124, 34);
             btnSensorCocina.TabIndex = 19;
@@ -286,7 +289,7 @@
             // 
             // btonSensorsala
             // 
-            btonSensorsala.Location = new Point(736, 471);
+            btonSensorsala.Location = new Point(625, 464);
             btonSensorsala.Name = "btonSensorsala";
             btonSensorsala.Size = new Size(164, 34);
             btonSensorsala.TabIndex = 20;
@@ -297,7 +300,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(268, 122);
+            label1.Location = new Point(204, 122);
             label1.Name = "label1";
             label1.Size = new Size(0, 25);
             label1.TabIndex = 21;
@@ -305,7 +308,7 @@
             // aireAcondicionadoComedor
             // 
             aireAcondicionadoComedor.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            aireAcondicionadoComedor.Location = new Point(244, 73);
+            aireAcondicionadoComedor.Location = new Point(386, 180);
             aireAcondicionadoComedor.Name = "aireAcondicionadoComedor";
             aireAcondicionadoComedor.Size = new Size(61, 92);
             aireAcondicionadoComedor.TabIndex = 22;
@@ -316,7 +319,7 @@
             // aireAcondicionadoHabitacion
             // 
             aireAcondicionadoHabitacion.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            aireAcondicionadoHabitacion.Location = new Point(818, 73);
+            aireAcondicionadoHabitacion.Location = new Point(625, 148);
             aireAcondicionadoHabitacion.Name = "aireAcondicionadoHabitacion";
             aireAcondicionadoHabitacion.Size = new Size(61, 92);
             aireAcondicionadoHabitacion.TabIndex = 23;
@@ -327,7 +330,7 @@
             // aireAcondicionadoCocina
             // 
             aireAcondicionadoCocina.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            aireAcondicionadoCocina.Location = new Point(244, 324);
+            aireAcondicionadoCocina.Location = new Point(371, 511);
             aireAcondicionadoCocina.Name = "aireAcondicionadoCocina";
             aireAcondicionadoCocina.Size = new Size(61, 92);
             aireAcondicionadoCocina.TabIndex = 24;
@@ -338,22 +341,44 @@
             // aireAcondicionadoSala
             // 
             aireAcondicionadoSala.Font = new Font("Segoe UI", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            aireAcondicionadoSala.Location = new Point(818, 325);
+            aireAcondicionadoSala.Location = new Point(701, 515);
             aireAcondicionadoSala.Name = "aireAcondicionadoSala";
             aireAcondicionadoSala.Size = new Size(61, 92);
             aireAcondicionadoSala.TabIndex = 25;
             aireAcondicionadoSala.Text = "aireAcondicionadoSala";
             aireAcondicionadoSala.UseVisualStyleBackColor = true;
+            aireAcondicionadoSala.Click += aireAcondicionadoSala_Click_1;
             // 
             // toolTip1
             // 
             toolTip1.OwnerDraw = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.fondo;
+            pictureBox1.Location = new Point(-396, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1714, 847);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 26;
+            pictureBox1.TabStop = false;
+            // 
+            // OperacionesLogicas
+            // 
+            OperacionesLogicas.Location = new Point(1037, 573);
+            OperacionesLogicas.Name = "OperacionesLogicas";
+            OperacionesLogicas.Size = new Size(218, 34);
+            OperacionesLogicas.TabIndex = 27;
+            OperacionesLogicas.Text = "Operaciones Logicas";
+            OperacionesLogicas.UseVisualStyleBackColor = true;
+            OperacionesLogicas.Click += OperacionesLogicas_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1179, 591);
+            ClientSize = new Size(1710, 783);
+            Controls.Add(OperacionesLogicas);
             Controls.Add(aireAcondicionadoSala);
             Controls.Add(aireAcondicionadoCocina);
             Controls.Add(aireAcondicionadoHabitacion);
@@ -380,12 +405,15 @@
             Controls.Add(HabitacionTemp);
             Controls.Add(ComedorTemp);
             Controls.Add(Lahora);
+            Controls.Add(pictureBox1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)ComedorTemp).EndInit();
             ((System.ComponentModel.ISupportInitialize)HabitacionTemp).EndInit();
             ((System.ComponentModel.ISupportInitialize)SalaTemp).EndInit();
             ((System.ComponentModel.ISupportInitialize)CocinaTemp).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -420,5 +448,7 @@
         private Button aireAcondicionadoCocina;
         private Button aireAcondicionadoSala;
         private ToolTip toolTip1;
+        private PictureBox pictureBox1;
+        private Button OperacionesLogicas;
     }
 }
