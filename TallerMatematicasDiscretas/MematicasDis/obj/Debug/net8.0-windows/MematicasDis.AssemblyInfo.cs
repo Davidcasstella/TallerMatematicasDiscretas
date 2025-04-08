@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MematicasDis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2da642cd2ecb5702256d29fe4750a819d2809fd9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43ab27a2f53bf48a94a05bf74ff4e0fe95b11051")]
 [assembly: System.Reflection.AssemblyProductAttribute("MematicasDis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MematicasDis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -66,7 +66,7 @@ namespace MematicasDis
             aireAcondicionadoHabitacion.Text = "❄️ Aire Apagado";
             aireAcondicionadoCocina.Text = "❄️ Aire Apagado";
             aireAcondicionadoSala.Text = "❄️ Aire Apagado";
-
+            
         }
 
 
@@ -641,10 +641,172 @@ namespace MematicasDis
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void OperacionesLogicas_Click(object sender, EventArgs e)
         {
+
+
+
+            // Configuración del formulario
+            Form tablaVerdadForm = new Form();
+            tablaVerdadForm.Text = "Tabla de Verdad del Sistema Domótico";
+            tablaVerdadForm.Size = new Size(1100, 850);
+            tablaVerdadForm.StartPosition = FormStartPosition.CenterParent;
+            tablaVerdadForm.BackColor = Color.WhiteSmoke;
+            tablaVerdadForm.Font = new Font("Segoe UI", 9);
+
+            // Panel principal
+            Panel mainPanel = new Panel();
+            mainPanel.Dock = DockStyle.Fill;
+            mainPanel.Padding = new Padding(10);
+            tablaVerdadForm.Controls.Add(mainPanel);
+
+            DataGridView dataGridView = new DataGridView();
+            dataGridView.Dock = DockStyle.Fill;
+            dataGridView.ReadOnly = true;
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.BackgroundColor = Color.White;
+            dataGridView.BorderStyle = BorderStyle.None;
+
+            // Configuración de encabezados
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridView.ColumnHeadersHeight = 50;
+            dataGridView.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView.EnableHeadersVisualStyles = false;
+            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkSlateBlue;
+            dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            dataGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Agregar columnas para las entradas (sensores)
+            dataGridView.Columns.Add("HoraNocturna", "Hora Nocturna\n(18:00-6:00)");
+            dataGridView.Columns.Add("Presencia", "Sensor\nPresencia");
+            dataGridView.Columns.Add("TempAlta", "Temperatura\n>22°C");
+            dataGridView.Columns.Add("VentanaCerrada", "Ventana\nCerrada");
+            dataGridView.Columns.Add("PuertaCerrada", "Puerta\nCerrada");
+
+            // Agregar columnas para las salidas (actuadores)
+            dataGridView.Columns.Add("LuzEncendida", "Luz\nEncendida");
+            dataGridView.Columns.Add("AireEncendido", "Aire\nAcondicionado");
+
+            // Configurar estilo de columnas
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                // Diferenciar entradas de salidas
+                if (column.Index < 5) // Columnas de entrada
+                {
+                    column.DefaultCellStyle.BackColor = Color.Lavender;
+                    column.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                }
+                else // Columnas de salida
+                {
+                    column.DefaultCellStyle.BackColor = Color.Honeydew;
+                    column.DefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                }
+            }
+
+            // Generar todas las combinaciones posibles (2^5 = 32 combinaciones)
+            bool[] valores = { false, true };
+
+            foreach (bool horaNocturna in valores)
+            {
+                foreach (bool presencia in valores)
+                {
+                    foreach (bool tempAlta in valores)
+                    {
+                        foreach (bool ventanaCerrada in valores)
+                        {
+                            foreach (bool puertaCerrada in valores)
+                            {
+                                // Calcular salidas según las reglas del sistema
+                                bool luzEncendida = horaNocturna && presencia;
+                                bool aireEncendido = tempAlta && ventanaCerrada && puertaCerrada;
+
+                                // Agregar fila con los valores
+                                int rowIndex = dataGridView.Rows.Add();
+                                DataGridViewRow row = dataGridView.Rows[rowIndex];
+
+                                // Llenar valores (1/0 para entradas, ON/OFF para salidas)
+                                row.Cells["HoraNocturna"].Value = horaNocturna ? "1" : "0";
+                                row.Cells["Presencia"].Value = presencia ? "1" : "0";
+                                row.Cells["TempAlta"].Value = tempAlta ? "1" : "0";
+                                row.Cells["VentanaCerrada"].Value = ventanaCerrada ? "1" : "0";
+                                row.Cells["PuertaCerrada"].Value = puertaCerrada ? "1" : "0";
+                                row.Cells["LuzEncendida"].Value = luzEncendida ? "ON" : "OFF";
+                                row.Cells["AireEncendido"].Value = aireEncendido ? "ON" : "OFF";
+
+                                // Colores para estados ON/OFF
+                                row.Cells["LuzEncendida"].Style.ForeColor = luzEncendida ? Color.Green : Color.Red;
+                                row.Cells["AireEncendido"].Style.ForeColor = aireEncendido ? Color.Green : Color.Red;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Panel para el DataGridView con borde
+            Panel gridPanel = new Panel();
+            gridPanel.Dock = DockStyle.Fill;
+            gridPanel.Padding = new Padding(5);
+            gridPanel.BackColor = Color.DarkSlateBlue;
+            gridPanel.Controls.Add(dataGridView);
+            mainPanel.Controls.Add(gridPanel);
+
+            // Panel para las ecuaciones lógicas con diseño mejorado
+            Panel ecuacionPanel = new Panel();
+            ecuacionPanel.Dock = DockStyle.Bottom;
+            ecuacionPanel.Height = 100;
+            ecuacionPanel.BackColor = Color.White;
+            ecuacionPanel.Padding = new Padding(15);
+            ecuacionPanel.BorderStyle = BorderStyle.FixedSingle;
+
+            RichTextBox rtbEcuaciones = new RichTextBox();
+            rtbEcuaciones.Dock = DockStyle.Fill;
+            rtbEcuaciones.ReadOnly = true;
+            rtbEcuaciones.BackColor = Color.WhiteSmoke;
+            rtbEcuaciones.BorderStyle = BorderStyle.None;
+            rtbEcuaciones.Font = new Font("Consolas", 10, FontStyle.Regular);
+
+            rtbEcuaciones.Text = @"ECUACIONES LÓGICAS DEL SISTEMA:
+
+                1. CONTROL DE ILUMINACIÓN:
+                     Luz Encendida = HoraNocturna ∧ Presencia
+                2. CONTROL DE TEMPERATURA:
+                 Aire Acondicionado Encendido = TempAlta ∧ VentanaCerrada ∧ PuertaCerrada
+
+                REGLAS:
+                • HoraNocturna = 1 cuando la hora está entre 18:00 y 6:00
+                • TempAlta = 1 cuando temperatura > 22°C
+                • Todos los sensores = 1 cuando están activos/cerrados";
+
+            // Aplicar formato al texto
+            rtbEcuaciones.Select(0, 19);
+            rtbEcuaciones.SelectionFont = new Font("Consolas", 11, FontStyle.Bold);
+            rtbEcuaciones.SelectionColor = Color.DarkSlateBlue;
+
+            rtbEcuaciones.Select(rtbEcuaciones.Text.IndexOf("1. CONTROL"), 17);
+            rtbEcuaciones.SelectionFont = new Font("Consolas", 10, FontStyle.Bold);
+
+            rtbEcuaciones.Select(rtbEcuaciones.Text.IndexOf("2. CONTROL"), 17);
+            rtbEcuaciones.SelectionFont = new Font("Consolas", 10, FontStyle.Bold);
+
+            rtbEcuaciones.Select(rtbEcuaciones.Text.IndexOf("REGLAS:"), 7);
+            rtbEcuaciones.SelectionFont = new Font("Consolas", 10, FontStyle.Bold);
+            rtbEcuaciones.SelectionColor = Color.DarkSlateBlue;
+
+            ecuacionPanel.Controls.Add(rtbEcuaciones);
+            mainPanel.Controls.Add(ecuacionPanel);
+
+            // Mostrar el formulario
+            tablaVerdadForm.ShowDialog();
+
+
+
 
         }
 
@@ -791,6 +953,11 @@ namespace MematicasDis
 
 
         }
+
+
+
+
+
     }
 
 

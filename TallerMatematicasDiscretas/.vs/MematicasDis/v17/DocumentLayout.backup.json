@@ -51,9 +51,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.cs",
               "RelativeDocumentMoniker": "MematicasDis\\Form1.cs",
-              "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.cs*",
-              "RelativeToolTip": "MematicasDis\\Form1.cs*",
-              "ViewState": "AgIAACEBAAAAAAAAAAAcwHoBAAAxAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.cs",
+              "RelativeToolTip": "MematicasDis\\Form1.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAYwEQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T01:39:25.746Z",
               "IsPinned": true,
@@ -65,9 +65,9 @@
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "MematicasDis\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.Designer.cs*",
-              "RelativeToolTip": "MematicasDis\\Form1.Designer.cs*",
-              "ViewState": "AgIAAAcBAAAAAAAAAAAqwBYCAAAlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.Designer.cs",
+              "RelativeToolTip": "MematicasDis\\Form1.Designer.cs",
+              "ViewState": "AgIAAPoBAAAAAAAAAAAqwBYCAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T01:56:13.239Z",
               "EditorCaption": ""
@@ -78,8 +78,8 @@
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.cs",
               "RelativeDocumentMoniker": "MematicasDis\\Form1.cs",
-              "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "MematicasDis\\Form1.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MematicasDis\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T01:39:00.77Z",
               "EditorCaption": " [Dise\u00F1o]"
@@ -94,8 +94,7 @@
               "RelativeToolTip": "MematicasDis\\MematicasDis.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-07T01:38:52.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T01:38:52.833Z"
             }
           ]
         }
