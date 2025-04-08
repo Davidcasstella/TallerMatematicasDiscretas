@@ -39,6 +39,15 @@ namespace MematicasDis
         private bool puertaCocinaCerrada = false;
         private bool ventanaSalaCerrada = false;
         private bool puertaSalaCerrada = false;
+        private bool puertaPrincipalCerrada = false;
+        private bool SensorComedorCerrado = false;
+
+
+        int totalSecondsInDay = 0;
+        int totalMillisecondsInDay = 0;
+        int equivalentSeconds = 0;
+        int customHours = 0;
+
 
         public Form1()
         {
@@ -73,16 +82,16 @@ namespace MematicasDis
         {
             secondsPassed++;
             // Un día real tiene 86400 segundos. Dividimos el día en 24 segundos.
-            int totalSecondsInDay = 60 * 60; // Total de segundos en un día real
-            int totalMillisecondsInDay = (60 * 24) / 1000;
+            totalSecondsInDay = 60 * 60; // Total de segundos en un día real
+            totalMillisecondsInDay = (60 * 24) / 1000;
 
             // Calcular el equivalente en segundos de acuerdo a los segundos transcurridos
-            int equivalentSeconds = (secondsPassed * totalSecondsInDay) / 24;
+             equivalentSeconds = (secondsPassed * totalSecondsInDay) / 24;
             //int equivalentMilliseconds = (secondsPassed * totalMillisecondsInDay);// Cada segundo del temporizador representa 1/24 de un día real
 
             // Convertir el equivalente de segundos en horas, minutos y segundos
-            int customHours = equivalentSeconds / 3600; // Convertir segundos a horas
-            int customMinutes = (equivalentSeconds % 3600) / 60; // Convertir el residuo de segundos en minutos
+             customHours = equivalentSeconds / 3600; // Convertir segundos a horas
+            int customMinutes = (equivalentSeconds % 3600) / 36; // Convertir el residuo de segundos en minutos
             int custommili = (equivalentSeconds % 999) / 11;
 
             // Mostrar el tiempo en formato HH:MM:SS
@@ -96,6 +105,7 @@ namespace MematicasDis
             {
                 if (!bombilloComedorEncendido)
                     EncenderLucesComedor();
+
                 if (!bombilloHabitacionEncendido)
                     EncenderLucesHabitacion();
                 if (!bombilloCocinaEncendido)
@@ -107,6 +117,7 @@ namespace MematicasDis
             {
                 if (bombilloComedorEncendido)
                     ApagarLucesComedor();
+
                 if (bombilloHabitacionEncendido)
                     ApagarLucesHabitacion();
                 if (bombilloCocinaEncendido)
@@ -192,71 +203,24 @@ namespace MematicasDis
 
         private void btnBombillo_Click(object sender, EventArgs e)
         {
-            {
-                if (bombilloEncendido)
-                {
-                    // Apagar el bombillo (simbolizado por el icono apagado)
-                    btnBombilloComedor.Text = "💡";
-                    btnBombilloComedor.ForeColor = Color.Gray;
-                }
-                else
-                {
-                    // Encender el bombillo (color amarillo)
-                    btnBombilloComedor.Text = "💡   ";
-                    btnBombilloComedor.ForeColor = Color.Yellow;
-                }
-                bombilloEncendido = !bombilloEncendido;
-
-
-            }
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
 
         }
 
         private void btnBombilloHabitacion_Click(object sender, EventArgs e)
         {
-            {
-                if (bombilloEncendido)
-                {
-                    // Apagar el bombillo (simbolizado por el icono apagado)
-                    btnBombilloHabitacion.Text = "💡";
-                    btnBombilloHabitacion.ForeColor = Color.Gray;
-                }
-                else
-                {
-                    // Encender el bombillo (color amarillo)
-                    btnBombilloHabitacion.Text = "💡   ";
-                    btnBombilloHabitacion.ForeColor = Color.Yellow;
-                }
-                bombilloEncendido = !bombilloEncendido;
-
-
-            }
+            
 
         }
 
         private void btnBombilloCocina_Click(object sender, EventArgs e)
         {
-            {
-                if (bombilloEncendido)
-                {
-                    // Apagar el bombillo (simbolizado por el icono apagado)
-                    btnBombilloCocina.Text = "💡";
-                    btnBombilloCocina.ForeColor = Color.Gray;
-                }
-                else
-                {
-                    // Encender el bombillo (color amarillo)
-
-                    btnBombilloCocina.Text = "💡   ";
-                    btnBombilloCocina.ForeColor = Color.Yellow;
-                }
-                bombilloEncendido = !bombilloEncendido;
-
-            }
+            
 
         }
 
@@ -277,23 +241,7 @@ namespace MematicasDis
 
         private void btnBombilloSala_Click_1(object sender, EventArgs e)
         {
-            {
-                if (bombilloEncendido)
-                {
-                    // Apagar el bombillo (simbolizado por el icono apagado)
-                    btnBombilloSala.Text = "💡";
-                    btnBombilloSala.ForeColor = Color.Gray;
-                }
-                else
-                {
-                    // Encender el bombillo (color amarillo)
-
-                    btnBombilloSala.Text = "💡";
-                    btnBombilloSala.ForeColor = Color.Yellow;
-                }
-                bombilloEncendido = !bombilloEncendido;
-
-            }
+            
         }
 
         private void VentanaComedor_CheckedChanged(object sender, EventArgs e)
@@ -319,7 +267,7 @@ namespace MematicasDis
             ventanaHabitacionCerrada = VentanaHabitacion.Checked;  // Suponiendo que VentanaHabitacion es un control tipo CheckBox
             EncenderAireAcondicionadoHabitacion();
             VerificarAireHabitacion();
-            
+
 
         }
 
@@ -345,8 +293,9 @@ namespace MematicasDis
             puertaCocinaCerrada = PuertaCocina.Checked;  // Suponiendo que PuertaCocina es un control tipo CheckBox
             EncenderAireAcondicionadoCocina();
             VerificarAireCocina();
-            VerificarAireComedor(); 
-            
+            VerificarAireComedor();
+
+
         }
 
         private void VentanaSala_CheckedChanged(object sender, EventArgs e)
@@ -376,10 +325,13 @@ namespace MematicasDis
                 {
                     EncenderLucesComedor();  // Llamar a la función que enciende las luces
                 }
-                else
+            }
+            else
+            {
+                // Si no es el rango horario, también puedes encender las luces si lo deseas
+                if (!bombilloComedorEncendido)
                 {
-                    // Si el bombillo ya está encendido, puedes agregar un comportamiento si deseas
-                    // como cambiar el color o hacer alguna acción
+                    EncenderLucesComedor();
                 }
             }
 
@@ -392,6 +344,7 @@ namespace MematicasDis
                 if (!bombilloHabitacionEncendido)
                     EncenderLucesHabitacion();
             }
+            bombilloEncendido = !bombilloEncendido;
 
         }
 
@@ -419,11 +372,11 @@ namespace MematicasDis
         {
             // Verificar que la temperatura es mayor o igual a 22°C
             // Y que tanto la puerta como la ventana estén cerradas
-            if (temperaturaComedor > 22 && ventanaComedorCerrada && puertaComedorCerrada && puertaCocinaCerrada)
+            if (temperaturaCocina > 22 && ventanaCocinaCerrada && puertaSalaCerrada && puertaSalaCerrada && puertaPrincipalCerrada)
             {
                 // Si las condiciones se cumplen, encender el aire acondicionado
                 aireAcondicionadoComedorEncendido = true;
-                aireAcondicionadoComedor.Text = "🌬️ Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
+                aireAcondicionadoComedor.Text = "💨 Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
                 aireAcondicionadoComedor.ForeColor = Color.Blue;  // Cambiar color a azul para indicar que está encendido
             }
             else
@@ -444,7 +397,7 @@ namespace MematicasDis
             {
                 // Si las condiciones se cumplen, encender el aire acondicionado
                 aireAcondicionadoHabitacionEncendido = true;
-                aireAcondicionadoHabitacion.Text = "🌬️ Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
+                aireAcondicionadoHabitacion.Text = "💨 Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
                 aireAcondicionadoHabitacion.ForeColor = Color.Blue;  // Cambiar color a azul para indicar que está encendido
             }
             else
@@ -461,11 +414,11 @@ namespace MematicasDis
         {
             // Verificar que la temperatura es mayor o igual a 22°C
             // Y que tanto la puerta como la ventana estén cerradas en la cocina
-            if (temperaturaCocina > 22 && ventanaCocinaCerrada && puertaSalaCerrada && puertaSalaCerrada)
+            if (temperaturaCocina > 22 && ventanaCocinaCerrada && puertaCocinaCerrada && puertaSalaCerrada)
             {
                 // Si las condiciones se cumplen, encender el aire acondicionado
                 aireAcondicionadoCocinaEncendido = true;
-                aireAcondicionadoCocina.Text = "🌬️ Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
+                aireAcondicionadoCocina.Text = "💨 Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
                 aireAcondicionadoCocina.ForeColor = Color.Blue;  // Cambiar color a azul para indicar que está encendido
             }
             else
@@ -486,14 +439,14 @@ namespace MematicasDis
             {
                 // Si las condiciones se cumplen, encender el aire acondicionado
                 aireAcondicionadoSalaEncendido = true;
-                aireAcondicionadoSala.Text = "🌬️ Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
+                aireAcondicionadoSala.Text = "💨 Aire Encendido";  // Cambiar texto del botón a "Aire Encendido"
                 aireAcondicionadoSala.ForeColor = Color.Blue;  // Cambiar color a azul para indicar que está encendido
             }
             else
             {
                 // Si alguna de las condiciones no se cumple, apagar el aire acondicionado
                 aireAcondicionadoSalaEncendido = false;
-                aireAcondicionadoSala.Text = "❄️ Aire Apagado";  // Cambiar texto del botón a "Aire Apagado"
+                aireAcondicionadoSala.Text = "❄ Aire Apagado";  // Cambiar texto del botón a "Aire Apagado"
                 aireAcondicionadoSala.ForeColor = Color.Gray;  // Cambiar color a gris para indicar que está apagado
             }
 
@@ -504,7 +457,7 @@ namespace MematicasDis
             temperaturaHabitacion = HabitacionTemp.Value;
             toolTip.SetToolTip(HabitacionTemp, "Temperatura: " + temperaturaHabitacion + "°C");
 
-            if (temperaturaHabitacion > 22 && ventanaHabitacionCerrada && puertaHabitacionCerrada )
+            if (temperaturaHabitacion > 22 && ventanaHabitacionCerrada && puertaHabitacionCerrada)
             {
                 EncenderAireAcondicionadoHabitacion();
             }
@@ -547,7 +500,7 @@ namespace MematicasDis
         }
         private void VerificarAireCocina()
         {
-            if (temperaturaCocina > 22 && ventanaCocinaCerrada && puertaCocinaCerrada && puertaSalaCerrada)
+            if (temperaturaCocina > 22 && ventanaCocinaCerrada && puertaCocinaCerrada && puertaSalaCerrada && puertaPrincipalCerrada)
             {
                 EncenderAireAcondicionadoCocina();
             }
@@ -594,18 +547,18 @@ namespace MematicasDis
             // Comprobar que la temperatura es mayor a 22°C y que tanto la ventana como la puerta estén cerradas
             if (temperaturaComedor > 22 && ventanaComedorCerrada && puertaComedorCerrada && puertaCocinaCerrada)
             {
-                
+
                 aireAcondicionadoComedorEncendido = true;
-                aireAcondicionadoComedor.Text = "🌬️ Aire Encendido";  // Símbolo de aire encendido
+                aireAcondicionadoComedor.Text = "💨 Aire Encendido";  // Símbolo de aire encendido
                 aireAcondicionadoComedor.ForeColor = Color.Blue;  // Cambiar color a azul cuando está encendido
             }
             else
             {
-                
+
                 // Si las condiciones no se cumplen, apagamos el aire acondicionado
                 ApagarAireAcondicionadoComedor();  // Apagar el aire acondicionado si no se cumplen las condiciones
             }
-            
+
         }
 
         private void ApagarAireAcondicionadoComedor()
@@ -623,7 +576,7 @@ namespace MematicasDis
             if (temperaturaHabitacion > 22 && ventanaHabitacionCerrada && puertaHabitacionCerrada && puertaComedorCerrada)
             {
                 aireAcondicionadoHabitacionEncendido = true;
-                aireAcondicionadoHabitacion.Text = "🌬️ Aire Encendido";
+                aireAcondicionadoHabitacion.Text = "💨 Aire Encendido";
                 aireAcondicionadoHabitacion.ForeColor = Color.Blue;
 
             }
@@ -639,10 +592,10 @@ namespace MematicasDis
 
         private void EncenderAireAcondicionadoCocina()
         {
-            if (temperaturaCocina > 22 && ventanaCocinaCerrada && puertaSalaCerrada && puertaSalaCerrada)
+            if (temperaturaCocina > 22 && ventanaCocinaCerrada && puertaSalaCerrada && puertaSalaCerrada && puertaPrincipalCerrada)
             {
                 aireAcondicionadoCocinaEncendido = true;
-                aireAcondicionadoCocina.Text = "🌬️ Aire Encendido";
+                aireAcondicionadoCocina.Text = "💨 Aire Encendido";
                 aireAcondicionadoCocina.ForeColor = Color.Blue;
 
             }
@@ -661,7 +614,7 @@ namespace MematicasDis
             if (temperaturaSala > 22 && ventanaSalaCerrada && puertaSalaCerrada && puertaHabitacionCerrada)
             {
                 aireAcondicionadoSalaEncendido = true;
-                aireAcondicionadoSala.Text = "🌬️ Aire Encendido";
+                aireAcondicionadoSala.Text = "💨 Aire Encendido";
                 aireAcondicionadoSala.ForeColor = Color.Blue;
 
             }
@@ -692,6 +645,150 @@ namespace MematicasDis
 
         private void OperacionesLogicas_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void PuertaPrincipal_CheckedChanged(object sender, EventArgs e)
+        {
+            puertaPrincipalCerrada = PuertaPrincipal.Checked;  // Suponiendo que PuertaCocina es un control tipo CheckBox
+            EncenderAireAcondicionadoCocina();
+            VerificarAireCocina();
+            VerificarAireComedor();
+            VerificarAireCocina();
+
+        }
+
+        private void SensorCocinaPresencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (bombilloEncendido)
+            {
+                // Apagar el bombillo (simbolizado por el icono apagado)
+                btnBombilloSala.Text = "💡";
+                btnBombilloSala.ForeColor = Color.Gray;
+            }
+            else
+            {
+                // Encender el bombillo (color amarillo)
+
+                btnBombilloSala.Text = "💡";
+                btnBombilloSala.ForeColor = Color.Yellow;
+            }
+            bombilloEncendido = !bombilloEncendido;
+
+        }
+
+        private void SensorHabitacionPresencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (customHours >= 18 || customHours < 6)
+            {
+                // Solo encender las luces si el sensor detecta movimiento y las luces no están encendidas
+                if (SensorHabitacionPresencia.Checked && !bombilloHabitacionEncendido)
+                {
+                    EncenderLucesHabitacion();
+                }
+                // Si no hay movimiento, apagar las luces
+                else if (!SensorHabitacionPresencia.Checked && bombilloHabitacionEncendido)
+                {
+                    ApagarLucesHabitacion();
+                }
+            }
+            else
+            {
+                // Fuera del rango de 6:00 AM a 6:00 PM, siempre apagar las luces
+                // Si el sensor detecta movimiento fuera de este rango, no encender la luz
+                if (bombilloHabitacionEncendido)
+                {
+                    ApagarLucesHabitacion();
+                }
+            }
+
+
+        }
+
+        private void SensorCocinaaPresencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (customHours >= 18 || customHours < 6)
+            {
+                // Solo encender las luces si el sensor detecta movimiento y las luces no están encendidas
+                if (SensorCocinaaPresencia.Checked && !bombilloCocinaEncendido)
+                {
+                    EncenderLucesCocina();
+                }
+                // Si no hay movimiento, apagar las luces
+                else if (!SensorCocinaaPresencia.Checked && bombilloCocinaEncendido)
+                {
+                    ApagarLucesCocina();
+                }
+            }
+            else
+            {
+                // Fuera del rango de 6:00 AM a 6:00 PM, siempre apagar las luces
+                // Si el sensor detecta movimiento fuera de este rango, no encender la luz
+                if (bombilloCocinaEncendido)
+                {
+                    ApagarLucesCocina();
+                }
+            }
+
+
+        }
+
+        private void SensorSalaPresencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (customHours >= 18 || customHours < 6)
+            {
+                // Solo encender las luces si el sensor detecta movimiento y las luces no están encendidas
+                if (SensorSalaPresencia.Checked && !bombilloSalaEncendido)
+                {
+                    EncenderLucesSala();
+                }
+                // Si no hay movimiento, apagar las luces
+                else if (!SensorSalaPresencia.Checked && bombilloSalaEncendido)
+                {
+                    ApagarLucesSala();
+                }
+            }
+            else
+            {
+                // Fuera del rango de 6:00 AM a 6:00 PM, siempre apagar las luces
+                // Si el sensor detecta movimiento fuera de este rango, no encender la luz
+                if (bombilloSalaEncendido)
+                {
+                    ApagarLucesSala();
+                }
+            }
+
+        }
+
+        private void SensorComedorPresencia_CheckedChanged(object sender, EventArgs e)
+        {
+
+            
+                    if (customHours >= 18 || customHours < 6)
+                    {
+                        // Solo encender las luces si el sensor detecta movimiento y las luces no están encendidas
+                        if (SensorComedorPresencia.Checked && !bombilloComedorEncendido)
+                        {
+                            EncenderLucesComedor();
+                        }
+                        // Si no hay movimiento, apagar las luces
+                        else if (!SensorComedorPresencia.Checked && bombilloComedorEncendido)
+                        {
+                            ApagarLucesComedor();
+                        }
+                    }
+                    else
+                    {
+                        // Fuera del rango de 6:00 AM a 6:00 PM, siempre apagar las luces
+                        // Si el sensor detecta movimiento fuera de este rango, no encender la luz
+                        if (bombilloComedorEncendido)
+                        {
+                            ApagarLucesComedor();
+                        }
+                    }
+                
+
+
 
         }
     }

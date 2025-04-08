@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|solutionrelative:mematicasdis\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|c:\\users\\david\\desktop\\tallerdiscretaseste-es\\tallermatematicasdiscretas\\mematicasdis\\mematicasdis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|solutionrelative:mematicasdis\\mematicasdis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|c:\\users\\david\\desktop\\tallerdiscretaseste-es\\tallermatematicasdiscretas\\mematicasdis\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|solutionrelative:mematicasdis\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|c:\\users\\david\\desktop\\tallerdiscretaseste-es\\tallermatematicasdiscretas\\mematicasdis\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|solutionrelative:mematicasdis\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|c:\\users\\david\\desktop\\tallerdiscretaseste-es\\tallermatematicasdiscretas\\mematicasdis\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|solutionrelative:mematicasdis\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|c:\\users\\david\\desktop\\tallerdiscretaseste-es\\tallermatematicasdiscretas\\mematicasdis\\mematicasdis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|solutionrelative:mematicasdis\\mematicasdis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C642EAF-2A62-4CC4-8BBD-E5601CA337A6}|MematicasDis\\MematicasDis.csproj|c:\\users\\david\\desktop\\tallerdiscretaseste-es\\tallermatematicasdiscretas\\mematicasdis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,8 +43,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T01:39:14.845Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -54,7 +53,7 @@
               "RelativeDocumentMoniker": "MematicasDis\\Form1.cs",
               "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.cs",
               "RelativeToolTip": "MematicasDis\\Form1.cs",
-              "ViewState": "AgIAAGoBAAAAAAAAAAAcwHMBAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACEBAAAAAAAAAAAcwHoBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T01:39:25.746Z",
               "IsPinned": true,
@@ -62,13 +61,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "MematicasDis\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\Form1.Designer.cs",
               "RelativeToolTip": "MematicasDis\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAqwBYCAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T01:56:13.239Z",
               "EditorCaption": ""
@@ -87,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MematicasDis.csproj",
               "DocumentMoniker": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj",
               "RelativeDocumentMoniker": "MematicasDis\\MematicasDis.csproj",
