@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj": {}
+    "C:\\Users\\David\\Desktop\\TallerDiscretas\\TallerMatematicasDiscretas\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj": {
+    "C:\\Users\\David\\Desktop\\TallerDiscretas\\TallerMatematicasDiscretas\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj",
+        "projectUniqueName": "C:\\Users\\David\\Desktop\\TallerDiscretas\\TallerMatematicasDiscretas\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj",
         "projectName": "MematicasDis",
-        "projectPath": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj",
+        "projectPath": "C:\\Users\\David\\Desktop\\TallerDiscretas\\TallerMatematicasDiscretas\\TallerMatematicasDiscretas\\MematicasDis\\MematicasDis.csproj",
         "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\David\\Desktop\\TALLERDISCRETASEste-es\\TallerMatematicasDiscretas\\MematicasDis\\obj\\",
+        "outputPath": "C:\\Users\\David\\Desktop\\TallerDiscretas\\TallerMatematicasDiscretas\\TallerMatematicasDiscretas\\MematicasDis\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

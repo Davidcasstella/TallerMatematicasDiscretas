@@ -41,6 +41,7 @@ namespace MematicasDis
         private bool puertaSalaCerrada = false;
         private bool puertaPrincipalCerrada = false;
         private bool SensorComedorCerrado = false;
+        private bool interruptor = false;
 
 
         int totalSecondsInDay = 0;
@@ -66,7 +67,7 @@ namespace MematicasDis
             aireAcondicionadoHabitacion.Text = "❄️ Aire Apagado";
             aireAcondicionadoCocina.Text = "❄️ Aire Apagado";
             aireAcondicionadoSala.Text = "❄️ Aire Apagado";
-            
+
         }
 
 
@@ -86,11 +87,11 @@ namespace MematicasDis
             totalMillisecondsInDay = (60 * 24) / 1000;
 
             // Calcular el equivalente en segundos de acuerdo a los segundos transcurridos
-             equivalentSeconds = (secondsPassed * totalSecondsInDay) / 24;
+            equivalentSeconds = (secondsPassed * totalSecondsInDay) / 24;
             //int equivalentMilliseconds = (secondsPassed * totalMillisecondsInDay);// Cada segundo del temporizador representa 1/24 de un día real
 
             // Convertir el equivalente de segundos en horas, minutos y segundos
-             customHours = equivalentSeconds / 3600; // Convertir segundos a horas
+            customHours = equivalentSeconds / 3600; // Convertir segundos a horas
             int customMinutes = (equivalentSeconds % 3600) / 36; // Convertir el residuo de segundos en minutos
             int custommili = (equivalentSeconds % 999) / 11;
 
@@ -101,10 +102,12 @@ namespace MematicasDis
             Lahora.Text = customTimeString;
             // Encender las luces si la hora está entre 6:00 AM y 6:00 PM
 
-            if (customHours >= 18 || customHours < 6)
+            if ((customHours >= 18 || customHours < 6))
             {
                 if (!bombilloComedorEncendido)
                     EncenderLucesComedor();
+
+
 
                 if (!bombilloHabitacionEncendido)
                     EncenderLucesHabitacion();
@@ -144,6 +147,19 @@ namespace MematicasDis
             {
                 ApagarAireAcondicionadoComedor();
             }
+        }
+        private void interruporr()
+        {
+            if (bombilloComedorEncendido)
+            {
+                EncenderLucesComedor();
+
+            }
+            else
+            {
+                ApagarLucesComedor();
+            }
+            bombilloComedorEncendido = !bombilloComedorEncendido;
         }
 
         private void EncenderLucesComedor()
@@ -203,24 +219,24 @@ namespace MematicasDis
 
         private void btnBombillo_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void btnBombilloHabitacion_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void btnBombilloCocina_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -241,7 +257,7 @@ namespace MematicasDis
 
         private void btnBombilloSala_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void VentanaComedor_CheckedChanged(object sender, EventArgs e)
@@ -925,39 +941,81 @@ namespace MematicasDis
         private void SensorComedorPresencia_CheckedChanged(object sender, EventArgs e)
         {
 
-            
-                    if (customHours >= 18 || customHours < 6)
-                    {
-                        // Solo encender las luces si el sensor detecta movimiento y las luces no están encendidas
-                        if (SensorComedorPresencia.Checked && !bombilloComedorEncendido)
-                        {
-                            EncenderLucesComedor();
-                        }
-                        // Si no hay movimiento, apagar las luces
-                        else if (!SensorComedorPresencia.Checked && bombilloComedorEncendido)
-                        {
-                            ApagarLucesComedor();
-                        }
-                    }
-                    else
-                    {
-                        // Fuera del rango de 6:00 AM a 6:00 PM, siempre apagar las luces
-                        // Si el sensor detecta movimiento fuera de este rango, no encender la luz
-                        if (bombilloComedorEncendido)
-                        {
-                            ApagarLucesComedor();
-                        }
-                    }
-                
+
+            if (customHours >= 18 || customHours < 6)
+            {
+                // Solo encender las luces si el sensor detecta movimiento y las luces no están encendidas
+                if (SensorComedorPresencia.Checked && !bombilloComedorEncendido)
+                {
+                    EncenderLucesComedor();
+                }
+                // Si no hay movimiento, apagar las luces
+                else if (!SensorComedorPresencia.Checked && bombilloComedorEncendido)
+                {
+                    ApagarLucesComedor();
+                }
+            }
+            else
+            {
+                // Fuera del rango de 6:00 AM a 6:00 PM, siempre apagar las luces
+                // Si el sensor detecta movimiento fuera de este rango, no encender la luz
+                if (bombilloComedorEncendido)
+                {
+                    ApagarLucesComedor();
+                }
+            }
+
 
 
 
         }
 
+        private void SensorPuertaPrincipal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (customHours >= 18 || customHours < 6)
+            {
+                // Solo encender las luces si el sensor detecta movimiento y las luces no están encendidas
+                if (SensorCocinaaPresencia.Checked && !bombilloCocinaEncendido)
+                {
+                    EncenderLucesCocina();
+                }
+                // Si no hay movimiento, apagar las luces
+                else if (!SensorCocinaaPresencia.Checked && bombilloCocinaEncendido)
+                {
+                    ApagarLucesCocina();
+                }
+            }
+            else
+            {
+                // Fuera del rango de 6:00 AM a 6:00 PM, siempre apagar las luces
+                // Si el sensor detecta movimiento fuera de este rango, no encender la luz
+                if (bombilloCocinaEncendido)
+                {
+                    ApagarLucesCocina();
+                }
+            }
 
+        }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
